@@ -238,13 +238,11 @@ function coord_to_num(c) {
     var b = c.z
     return b*env.size + a;
 }
-
 var coord_diag_down_right = function(n) {
     if(n === null) { return null; }
-    var coord = num_to_coord(n);
-    var next =  {coord.x, coord.y - 1, coord.z +1};
-    var next_num = coord_to_num(next);
-    if( next_num >= env.total) {
+    var y_par = Math.floor(n / env.size) % 2;
+    var next =  n + env.size + y_par;
+    if( next >= env.total) {
 	switch(env.top) {
 	    case "torus":
 	    return  env.total - (n + 1);
@@ -252,7 +250,7 @@ var coord_diag_down_right = function(n) {
 	    return null;
 	}
     } else {
-	return next_num;
+	return next;
     }
 }
 
@@ -269,6 +267,37 @@ var coord_diag_up_left = function(n) {
 	return n - env.size1;
     }
 }
+
+// var coord_diag_down_right = function(n) {
+//     if(n === null) { return null; }
+//     var coord = num_to_coord(n);
+//     var next =  {coord.x, coord.y - 1, coord.z +1};
+//     var next_num = coord_to_num(next);
+//     if( next_num >= env.total) {
+// 	switch(env.top) {
+// 	    case "torus":
+// 	    return  env.total - (n + 1);
+// 	    default:
+// 	    return null;
+// 	}
+//     } else {
+// 	return next_num;
+//     }
+// }
+
+// var coord_diag_up_left = function(n) {
+//     if(n === null) { return null; }
+//     if( (n + env.size) >= env.total) {
+// 	switch(env.top) {
+// 	    case "torus":
+// 	    return  env.total - (n + 1);
+// 	    default:
+// 	    return null;
+// 	}
+//     } else {
+// 	return n - env.size1;
+//     }
+// }
 
 function get_neighbours(n) {
     if(env.board == "square") {
