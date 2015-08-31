@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+<title>Ising Model</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/jquery-ui.min.css" rel="stylesheet" />
+</HEAD>
+<BODY>
+  <div class="container-fluid">
+    <div class="row">
+      <div id="viewport" class="col-md-8 col-xs-12">
+	<div id="ising_square"></div>
+      </div>
+      <div id="controls" class="col-md-4 col-xs-12">
+	<div>Temperature: <div id="tempselect"></div></div>
+	<div>Size: <div id="sizeselect"></div></div>
+	<div>Energy: <span id="energy"></span></div>
+	<div>Board Type: <div>Square:<input type="radio" name="board" value="square" checked /> Hexagon:<input type="radio" name="board" value="hexagon" /></div></div>
+	<div>Topology: 
+	  <ul style="position: relative; list-style-type: none;">
+	    <li id="closed_border">Closed: <input type="radio" name="borders" value="closed" checked/></li>
+	    <li id="torus_border">Torus: <input type="radio" name="borders" value="torus" /></li> 
+	    <li id="sphere_border">Sphere: <input type="radio" name="borders" value="sphere" /></li> 
+	    <li id="mobius_border">M&ouml;bius: <input type="radio" name="borders" value="mobius" /></li> 
+	    <li id="klein_border">Klein: <input type="radio" name="borders" value="klein" /></li> 
+	    <li id="projective_border">Projective: <input type="radio" name="borders" value="projective" /></li> 
+	  </ul>
+	</div>
+	<div>Show: <div>Spin:<input type="radio" name="show" value="spin" checked /> Avg Time Between Flips:<input type="radio" name="show" value="freq" /></div></div>
+	<div><button id="min_energy" class="btn btn-large btn-info" />Minimum Energy</div>
+	<div><button id="max_energy" class="btn btn-large btn-info" />Maximum Energy</div>
+	<br />
+	<div><button id="montecarlo" class="btn btn-large btn-warning"/>Randomly Choose</div>
+	<div><button id="heatup" class="btn btn-large btn-danger"/>Continuously Heat</div>
+	<div><button id="anneal" class="btn btn-large btn-primary"/>Continuously Cool</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/d3.min.js"></script>
+  <script type="text/javascript" src="js/model.js"></script>
+  <script>
+   //console.log(squareCells);
+  </script>
+</BODY>
+</HTML>
