@@ -1,2 +1,10 @@
 # ising
-Ising Model
+
+Working demo at: [http://statmechintro.herokuapp.com/](http://statmechintro.herokuapp.com/)
+
+## Ising Model
+The Two Dimensional Ising Model is a basic model in Statistical Mechanics with exact solutions.
+
+However, working through equations is not the same as seeing and interacting with a model, and there is no reason given current technology why these ideas cannot be properly visualized.  
+
+In this web app, a user interact with a grid of positively- and negatively-charged magnetic particles.  Using basic Monte Carlo simulation methods, the grid will update.  The main point is to show how temperature affects the model: at lower temperatures, only isolated regions change charge, while at higher temperatures, the entire grid starts to come together under a single charge.  In addition, the user can view the average time it takes to flip a charge, to see how different temperatures and topologies affect the model.
