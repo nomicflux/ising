@@ -1,6 +1,6 @@
 # Ising
 
-Working demo at: [http://statmechintro.herokuapp.com/](http://statmechintro.herokuapp.com/)
+Working demo at: [https://nomicflux.github.io/ising/](https://nomicflux.github.io/ising/)
 
 ## Ising Model
 The Two Dimensional Ising Model is a basic model in Statistical Mechanics with exact solutions.
